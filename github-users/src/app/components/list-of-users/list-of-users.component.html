@@ -1,1 +1,5 @@
-<p>list-of-users works!</p>
+<p>Inserta el usuario aquí</p>
+<form (ngSubmit)="setNameInUrl()">
+    <input id="name" type="text" [formControl]="userSearched">
+    <button type="submit">Buscar</button>
+</form>
