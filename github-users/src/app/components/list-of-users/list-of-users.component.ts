@@ -19,9 +19,7 @@ export class ListOfUsersComponent implements OnInit {
 
   setNameInUrl(){
     this._request.getUsers().subscribe((response: any) => {
-      console.log(response)
-      this.searchedUsersInInput= response.filter((elem: any) => elem.login.includes(this.userSearched.value))
-      console.log(this.searchedUsersInInput)
+      this.searchedUsersInInput = response.filter((elem: any) => elem.login.includes(this.userSearched.value))
     })
   }
 }

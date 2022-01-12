@@ -3,3 +3,8 @@
     <input id="name" type="text" [formControl]="userSearched">
     <button type="submit">Buscar</button>
 </form>
+<ul>
+    <li *ngFor="let user of searchedUsersInInput">
+        <p>{{user.login}}</p>
+    </li>
+</ul>
