@@ -1,10 +1,14 @@
-<p>Inserta el usuario aquí</p>
+<p class="titlePage">Inserta el usuario aquí</p>
 <form (ngSubmit)="setNameInUrl()">
-    <input id="name" type="text" [formControl]="userSearched">
-    <button type="submit">Buscar</button>
+    <input id="name" type="text" [formControl]="userSearched" class="inputUser">
+    <button type="submit" class="buttonSubmit">Buscar</button>
 </form>
+<p *ngIf="searchedUsersInInput.length === 0"> No hay datos que coincidan</p>
 <ul>
     <li *ngFor="let user of searchedUsersInInput">
-        <p>{{user.login}}</p>
+        <a href="" class="userTarget">
+            <p>{{user.login}}</p>
+            <img src={{user.avatar_url}} alt="User photo" class="photoUser">
+        </a>
     </li>
 </ul>

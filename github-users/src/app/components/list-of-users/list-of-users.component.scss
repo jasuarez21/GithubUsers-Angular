@@ -1,0 +1,46 @@
+.photoUser{
+    width: 70px;
+    height: 70px;
+    border-radius: 25px;
+}
+
+.titlePage{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f4a261;
+}
+
+.inputUser{
+    width: 10%;
+    height: 2vh;
+}
+
+.buttonSubmit {
+    width: 4%;
+    height: 2.5vh;
+    margin-left: 1vw;
+    background-color: #fae1dd;
+    border-radius: 5px;
+}
+
+.userTarget{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fae1dd;
+    border: 1px solid #fec5bb;
+    width: 30%;
+    height: 10vh;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black
+}
+
+ul {
+    list-style: none;
+}
