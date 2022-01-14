@@ -1,1 +1,14 @@
-<p>detail works!</p>
+<img src="{{userSelected[0]?.avatar_url}}" alt="" srcset="">
+<p>{{userSelected[0]?.login}}</p>
+<div>
+    <h3>REPOSITORIOS</h3>
+    <ul *ngFor="let repo of reposUserSelected">
+        <li>{{repo.name}}</li>
+    </ul>
+</div>
+<div>
+    <h3>FOLLOWERS</h3>
+    <ul *ngFor="let follower of followersUserSelected">
+        <li>{{follower.login}}</li>
+    </ul>
+</div>

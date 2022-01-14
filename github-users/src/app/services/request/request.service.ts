@@ -14,4 +14,12 @@ export class RequestService {
   public getUsers(){
     return this.http.get(this.URL_API)
   }
+
+  public getRepos(urlUserRepos: string){
+    return this.http.get(urlUserRepos)
+  }
+
+  public getFollowers(urlUserFollowers: string){
+    return this.http.get(urlUserFollowers)
+  }
 }
