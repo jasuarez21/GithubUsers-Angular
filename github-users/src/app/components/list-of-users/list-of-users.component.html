@@ -6,7 +6,7 @@
 <p *ngIf="searchedUsersInInput.length === 0"> No hay datos que coincidan</p>
 <ul>
     <li *ngFor="let user of searchedUsersInInput">
-        <a href="" class="userTarget">
+        <a [routerLink]="user.login" class="userTarget">
             <p>{{user.login}}</p>
             <img src={{user.avatar_url}} alt="User photo" class="photoUser">
         </a>
