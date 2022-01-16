@@ -2,9 +2,23 @@ ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    li{
-        border: 1px solid aquamarine
-    }
+}
+
+.backButton {
+    height: 5vh;
+    width: 5vw;
+    background-color: white;
+    border: 0px;
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+
+.reposContainer, .followersContainer {
+    border: 1px solid #fec5bb;
+    border-radius: 5px;
+    width: 15vw;
+    height: 40vh;
+    background-color: #fae1dd;
 }
 
 .headerUser{
@@ -13,10 +27,19 @@ ul {
     align-items: center;
 }
 
+.userDetailsContainer {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    width: 40vw;
+    margin-top: 5vh;
+    margin-left: 30vw;
+}
+
 .userPhoto {
-    height: 10vh;
-    width: 6vw;
-    border-radius: 50px;
+    height: 15vh;
+    width: 8vw;
+    border-radius: 25px;
 }
 
 .title{

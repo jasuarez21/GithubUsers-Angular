@@ -1,17 +1,19 @@
-<button class="backButton" (click)="goBack()">Back</button>
+<button class="backButton" (click)="goBack()">
+    <img src="https://img.icons8.com/color/48/000000/circled-left-2--v1.png" alt="Volver">
+</button>
 <div class="headerUser">
     <h3 class="title">{{userSelected[0]?.login}}</h3>
     <img src="{{userSelected[0]?.avatar_url}}" alt="User photo" class="userPhoto">
 </div>
 
-<section *ngIf="errorServer === false">
-    <div>
+<section *ngIf="errorServer === false" class="userDetailsContainer">
+    <div class="reposContainer">
         <h3 class="title">REPOSITORIOS</h3>
         <ul *ngFor="let repo of reposUserSelected">
             <li>{{repo.name}}</li>
         </ul>
     </div>
-    <div>
+    <div class="followersContainer">
         <h3 class="title">FOLLOWERS</h3>
         <ul *ngFor="let follower of followersUserSelected">
             <li>{{follower.login}}</li>
