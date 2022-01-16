@@ -1,0 +1,25 @@
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li{
+        border: 1px solid aquamarine
+    }
+}
+
+.headerUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userPhoto {
+    height: 10vh;
+    width: 6vw;
+    border-radius: 50px;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+}

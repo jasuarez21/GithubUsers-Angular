@@ -11,6 +11,8 @@ export class ListOfUsersComponent implements OnInit {
 
   public userSearched: string | any = new FormControl('');
   public searchedUsersInInput: any = []
+  public waiting : boolean = true
+  public errorServer: boolean = false
 
   constructor(private _request: RequestService) { }
 
@@ -19,7 +21,12 @@ export class ListOfUsersComponent implements OnInit {
 
   setNameInUrl(){
     this._request.getUsers().subscribe((response: any) => {
+      this.waiting = false
       this.searchedUsersInInput = response.filter((elem: any) => elem.login.includes(this.userSearched.value))
-    })
+    },
+    error => {
+      this.errorServer = true
+    }
+    )
   }
 }
