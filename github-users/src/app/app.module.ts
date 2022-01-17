@@ -8,12 +8,14 @@ import { ListOfUsersComponent } from './components/list-of-users/list-of-users.c
 import { DetailComponent } from './components/detail/detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListOfUsersComponent,
     DetailComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
