@@ -1,6 +1,6 @@
 import { FormControl } from '@angular/forms';
 import { RequestService } from './../../services/request/request.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/types/User';
 
 @Component({
