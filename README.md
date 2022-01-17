@@ -9,7 +9,7 @@ This is a test project with Angular.
 ### Clone the repo
 
 ```shell
-git clone https://github.com/bryanforbes/intern-angular
+git clone https://github.com/jasuarez21/GithubUsers-Angular.git
 cd githubusers-angular
 ```
 
