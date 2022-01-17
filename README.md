@@ -10,7 +10,7 @@ This is a test project with Angular.
 
 ```shell
 git clone https://github.com/jasuarez21/GithubUsers-Angular.git
-cd githubusers-angular
+cd github-users
 ```
 
 ### Install npm packages
