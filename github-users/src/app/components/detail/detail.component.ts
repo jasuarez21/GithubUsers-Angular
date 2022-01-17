@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from 'src/app/services/request/request.service';
 
@@ -14,6 +13,7 @@ export class DetailComponent implements OnInit {
   public reposUserSelected: any = []
   public followersUserSelected: any = []
   public errorServer : any = false
+  public waiting: boolean = true
 
   constructor
   (
@@ -29,6 +29,7 @@ export class DetailComponent implements OnInit {
       this._request.getRepos(this.userSelected[0].repos_url).subscribe((response: any) =>
       {
         this.reposUserSelected = response.splice(0,5)
+        this.waiting = false
       },
       error => {
         this.errorServer = true

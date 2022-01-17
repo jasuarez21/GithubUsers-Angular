@@ -4,8 +4,11 @@
         <input id="name" type="text" [formControl]="userSearched" class="inputUser">
         <button type="submit" class="buttonSubmit">Buscar</button>
     </form>
+    <div *ngIf="isSearching === true" class="spinnerContainer">
+        <mat-spinner></mat-spinner>
+    </div>
     <p *ngIf="searchedUsersInInput.length === 0 && waiting === false"> No hay datos que coincidan</p>
-    <p *ngIf="errorServer === true">El servidor no ha respondido correctamente intentalo más tarde</p>
+    <p *ngIf="errorServer === true && waiting === false">El servidor no ha respondido correctamente intentalo más tarde</p>
     <ul>
         <li *ngFor="let user of searchedUsersInInput">
             <a [routerLink]="user.login" class="userTarget">

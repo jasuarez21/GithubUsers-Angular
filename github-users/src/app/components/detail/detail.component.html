@@ -6,7 +6,7 @@
     <img src="{{userSelected[0]?.avatar_url}}" alt="User photo" class="userPhoto">
 </div>
 
-<section *ngIf="errorServer === false" class="userDetailsContainer">
+<section *ngIf="errorServer === false && waiting === false" class="userDetailsContainer">
     <div class="reposContainer">
         <h3 class="title">REPOSITORIOS</h3>
         <ul *ngFor="let repo of reposUserSelected">
@@ -20,4 +20,7 @@
         </ul>
     </div>
 </section>
-<p *ngIf="errorServer === true">Algo salió mal, el servidor no ha respondido correctamente</p>
+<div *ngIf="waiting === true" class="spinnerContainer">
+    <mat-spinner></mat-spinner>
+</div>
+<p *ngIf="errorServer === true && waiting === false">Algo salió mal, el servidor no ha respondido correctamente</p>

@@ -13,6 +13,7 @@ export class ListOfUsersComponent implements OnInit {
   public userSearched: string | any = new FormControl('');
   public searchedUsersInInput: any = []
   public waiting : boolean = true
+  public isSearching: boolean = false
   public errorServer: boolean = false
 
   constructor(private _request: RequestService) { }
@@ -21,11 +22,15 @@ export class ListOfUsersComponent implements OnInit {
   }
 
   setNameInUrl(){
+    this.isSearching = true
     this._request.getUsers().subscribe((response: any) => {
       this.waiting = false
+      this.isSearching = false
       this.searchedUsersInInput = response.filter((elem: User) => elem.login.includes(this.userSearched.value))
     },
     error => {
+      this.waiting = false
+      this.isSearching = false
       this.errorServer = true
     }
     )
